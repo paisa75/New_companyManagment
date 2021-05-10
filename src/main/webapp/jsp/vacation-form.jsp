@@ -45,7 +45,7 @@
                 <th bgcolor=#4CAF50>Date from :</th>
                 <td>
                     <%--<input type="datetime-local" name="from" size="45"/>--%>
-                    <input type="text" id="date1" name="from" size="45">
+                    <input type="text" id="date1" autocomplete="off" name="from" size="45">
                     <input type="hidden" id="id1" name="id" value="${id}">
                 </td>
             </tr>
@@ -53,7 +53,7 @@
                 <th bgcolor=#4CAF50>Date to :</th>
                 <td>
                     <%--<input type="datetime-local" name="to" size="45"/>--%>
-                    <input type="text" id="date2" name="to" size="45">
+                    <input type="text" id="date2" autocomplete="off" name="to" size="45">
                     <input type="hidden" id="id2" name="id" value="${id}">
                 </td>
             </tr>
