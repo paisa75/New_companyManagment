@@ -95,28 +95,4 @@ public class VacationDAo {
             e.printStackTrace();
         }
     }
-
-    ///getmanager
-  /*  public List<Employee> getAllEmployeeManager() {
-
-        Transaction transaction = null;
-        List<Vacation> RequestVaction = null;
-        try (Session session = HibernateUtil.getSessionFactory().openSession()) {
-            // start a transaction
-            transaction = session.beginTransaction();
-            // get an user object
-
-            RequestVaction = session.createNativeQuery("select * from vacation where person = userID ", Employee.class).list();
-
-            // commit transaction
-            transaction.commit();
-                    } catch (Exception e) {
-                    if (transaction != null) {
-                    transaction.rollback();
-                    }
-                    e.printStackTrace();
-                    }
-                    return RequestVaction;
-                    }*/
-
 }

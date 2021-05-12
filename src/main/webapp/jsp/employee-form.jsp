@@ -160,13 +160,9 @@
                     <c:if test="${employee != null}">
                         <th bgcolor=#4CAF50>Employee active:</th>
                         <td>
-                                <%-- <input type="text" name="active" size="15"
-                                        value="<c:out value='${employee.active}' />"
-                                 />--%>
                             <input type="checkbox" id="active" name="active" value="true">
                         </td>
                     </c:if>
-
                 </tr>
                 <tr>
                     <td colspan="2" align="center">

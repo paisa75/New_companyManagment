@@ -72,7 +72,6 @@
                 <td><c:out value="${vacation.from}"/></td>
                 <td><c:out value="${vacation.to}"/></td>
                 <td><c:out value="${vacation.description}"/></td>
-
                 <td>
                     <c:choose>
                         <c:when test="${empty vacation.state || vacation.getState().id!=4}">
@@ -93,7 +92,6 @@
                         <c:otherwise>
                         </c:otherwise>
                     </c:choose>
-                        <%--<a href="checkVacation?id=<c:out value='${employee.id}' />">CheckLeave</a>--%>
                 </td>
             </tr>
         </c:forEach>

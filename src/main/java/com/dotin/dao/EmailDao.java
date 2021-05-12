@@ -96,31 +96,4 @@ public class EmailDao {
 
 
     }
-   /* public Email getEmployeeEmail(String email){
-        Transaction transaction = null;
-        List<Email> emailList = null;
-        try (Session session = HibernateUtil.getSessionFactory().openSession()) {
-            // start a transaction
-            transaction = session.beginTransaction();
-            // get an user object
-            String hql = "from Email where description like :keyword";
-
-            String keyword = "New";
-            Query query = session.createQuery(hql);
-            query.setParameter("keyword", "%" + keyword + "%");
-
-            List<Product> listProducts = query.list();
-
-            emailList = session.createQuery("from Email e where e.disabled =false OR e.disabled=null  ").getResultList();
-
-            // commit transaction
-            transaction.commit();
-        } catch (Exception e) {
-            if (transaction != null) {
-                transaction.rollback();
-            }
-            e.printStackTrace();
-        }
-        return listOfEmployee;
-    }*/
 }

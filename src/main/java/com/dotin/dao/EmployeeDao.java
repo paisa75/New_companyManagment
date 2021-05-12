@@ -158,15 +158,6 @@ public class EmployeeDao {
 
     }
 
-    /* public List< Employee > getEmployee() {
-         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
-             Query query = session.createQuery("FROM Employee");
-             List<Employee> listResult = query.list();
-             return listResult;
-             //return session.createQuery("from Employee", Employee.class);
-             //return session.createQuery("SELECT a FROM Student a", Student.class).getResultList();
-         }
-     }*/
     @SuppressWarnings("unchecked")
     public List<Employee> getAllEmployee() {
 

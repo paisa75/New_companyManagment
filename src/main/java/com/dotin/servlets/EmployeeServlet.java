@@ -25,6 +25,7 @@ public class EmployeeServlet extends HttpServlet {
         employeeDao = new EmployeeDao();
         categoryDao = new CategoryDao();
     }
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String action = request.getRequestURI();
         try {
@@ -97,7 +98,6 @@ public class EmployeeServlet extends HttpServlet {
         Long roleId = Long.parseLong(request.getParameter("role"));
         Long managerId = request.getParameter("managerId") != null ? Long.parseLong(request.getParameter("managerId")) : null;
         String address = request.getParameter("address");
-        //boolean isActive = request.getParameter("active") != null ? Boolean.parseBoolean(request.getParameter("active")) : false;
         boolean isActive = true;
 
         Employee newEmployee = new Employee();
@@ -111,8 +111,6 @@ public class EmployeeServlet extends HttpServlet {
 
         newEmployee.setRole(roleId != null ? categoryDao.getCategoryElement(roleId) : null);
         newEmployee.setManager(managerId != null ? employeeDao.getEmployee(managerId) : null);
-
-        //newEmployee.setActive(true);
 
         employeeDao.saveEmployee(newEmployee
         );
@@ -154,8 +152,6 @@ public class EmployeeServlet extends HttpServlet {
         Long managerId = request.getParameter("managerId") != null ? Long.parseLong(request.getParameter("managerId")) : null;
         String address = request.getParameter("address");
         Boolean isActive = request.getParameter("active") != null ? Boolean.parseBoolean(request.getParameter("active")) : false;
-        ///Boolean isActive = request.getParameterValues("active");
-        //Employee employee = new Employee();
         Employee employee = employeeDao.getEmployee(id);
         employee.setId(id);
         employee.setName(name);

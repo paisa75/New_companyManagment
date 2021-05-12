@@ -8,27 +8,10 @@
     <link type="text/css" rel="stylesheet" href="/css/kamadatepicker.min.css">
     <script src="//code.jquery.com/jquery.min.js"></script>
     <script src="/js/kamadatepicker.min.js"></script>
-    <%--<script type="text/javascript" src="js/validators/loginValidator.js"></script>--%>
-
-   <%-- <link rel="stylesheet" href="resources/css/kamadatepicker.min.css">
-    <link rel="stylesheet" href="/kamadatepicker.min.css">
-
-    &lt;%&ndash;        <link rel="stylesheet" href="../css/kamadatepicker.min.css">
-        <link href="<c:url value="/resources/css/kamadatepicker.min.css" />" rel="stylesheet">&ndash;%&gt;
-    &lt;%&ndash;<jsp:include page="css/kamadatepicker.min.css"/>&ndash;%&gt;
-    &lt;%&ndash;<link rel="stylesheet" href="${pageContext.request.contextPath}css/kamadatepicker.min.css" />&ndash;%&gt;
-
-    <script src="${pageContext.request.contextPath}js/kamadatepicker.min.js"></script>--%>
 </head>
 <body>
 <center>
     <h1>vacation Request</h1>
-    <%--<h2>--%>
-    <%--<a href="new">Add New Employee</a>--%>
-    <%--&nbsp;&nbsp;&nbsp;--%>
-    <%--<a href="list">List All Employee</a>--%>
-
-    <%--</h2>--%>
 </center>
 <div align="center">
 
@@ -52,7 +35,6 @@
             <tr>
                 <th bgcolor=#4CAF50>Date to :</th>
                 <td>
-                    <%--<input type="datetime-local" name="to" size="45"/>--%>
                     <input type="text" id="date2" autocomplete="off" name="to" size="45">
                     <input type="hidden" id="id2" name="id" value="${id}">
                 </td>
@@ -63,13 +45,6 @@
                     <input type="text" name="description" size="45"/>
                 </td>
             </tr>
-            <%-- <tr>
-                 <th bgcolor=#4CAF50>userId:</th>
-                 <td>
-                     <input type="number" name="userID" size="45"/>
-
-                 </td>
-             </tr>--%>
             <tr>
                 <td colspan="2" align="center">
                     <input type="submit" value="Save"/>
@@ -80,8 +55,8 @@
 </div>
 </body>
 <script>
-      kamaDatepicker('date1', { buttonsColor: "red" });
-      kamaDatepicker('date2', { buttonsColor: "red" });
+    kamaDatepicker('date1', {buttonsColor: "red"});
+    kamaDatepicker('date2', {buttonsColor: "red"});
 
     var customOptions = {
         placeholder: "روز / ماه / سال"

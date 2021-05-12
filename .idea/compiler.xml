@@ -11,6 +11,7 @@
         <module name="Company-Managment1" />
         <module name="maven-servlet-demo" />
         <module name="mavenservletdemo" />
+        <module name="New_companyManagmentTEST" />
       </profile>
     </annotationProcessing>
   </component>

@@ -16,8 +16,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -88,7 +86,6 @@ public class VacationServlet extends HttpServlet {
     private void insertVacation(HttpServletRequest request, HttpServletResponse response)
             throws SQLException, IOException {
         JalaliCalendar jalaliCalendar = new JalaliCalendar();
-//        SimpleDateFormat formatter6 = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm");
         String toDate = request.getParameter("to");
         String fromDate = request.getParameter("from");
         String description = request.getParameter("description");
@@ -96,12 +93,10 @@ public class VacationServlet extends HttpServlet {
         Vacation vacation = new Vacation();
         vacation.setDescription(description);
 
-           /* Date from = formatter6.parse(fromDate);*/
-            Date from = jalaliCalendar.getGregorianDate(fromDate);
-            Date to = jalaliCalendar.getGregorianDate(toDate);
-           /* Date to = formatter6.parse(toDate)*/;
-            vacation.setFrom(from);
-            vacation.setTo(to);
+        Date from = jalaliCalendar.getGregorianDate(fromDate);
+        Date to = jalaliCalendar.getGregorianDate(toDate);
+        vacation.setFrom(from);
+        vacation.setTo(to);
 
 
         Employee employee = employeeDao.getEmployee(userID);
@@ -137,7 +132,7 @@ public class VacationServlet extends HttpServlet {
 
     }
 
-    private void  vactionConfirm(HttpServletRequest request, HttpServletResponse response)
+    private void vactionConfirm(HttpServletRequest request, HttpServletResponse response)
             throws SQLException, IOException {
         Long id = Long.parseLong(request.getParameter("id"));
         Long userId = Long.parseLong(request.getParameter("userId"));

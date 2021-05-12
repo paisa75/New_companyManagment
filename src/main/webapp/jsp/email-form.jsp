@@ -6,10 +6,7 @@
     <title>Employee Management Application</title>
 </head>
 <body>
-<%--<center>
-    <h1>Send Email</h1>
 
-</center>--%>
 <div align="center">
 
     <form action="email/insert" method="post">
@@ -20,29 +17,16 @@
                     Send New Email
                 </h2>
             </caption>
-            <%--<tr>--%>
-            <%--<th bgcolor=#4CAF50>Person Id:</th>--%>
-            <%--<td>--%>
-            <%--<input type="number" name="personId" size="45"/>--%>
-
-            <%--</td>--%>
-            <%--</tr>--%>
             <tr>
                 <th bgcolor=#4CAF50>Receiver :</th>
-                 <td>
-                     <select name="receiver" id="receiver">
-                         <c:forEach items="${receivers}" var="receiver">
-                             <option value="${receiver.id}">${receiver.name}</option>
-                         </c:forEach>
-                     </select>
-                     <input type="hidden" id="id" name="id" value="${id}">
-                 </td>
-               <%-- <td>
-                    <input type="text" name="receiver" size="50"
-                           value="<c:out value='${employee.email}' />"
-                    />
-
-                </td>--%>
+                <td>
+                    <select name="receiver" id="receiver">
+                        <c:forEach items="${receivers}" var="receiver">
+                            <option value="${receiver.id}">${receiver.name}</option>
+                        </c:forEach>
+                    </select>
+                    <input type="hidden" id="id" name="id" value="${id}">
+                </td>
             </tr>
             <tr>
                 <th bgcolor=#4CAF50>Subject :</th>
@@ -57,14 +41,6 @@
                     <textarea rows="10" cols="39" name="message"></textarea>
                 </td>
             </tr>
-            <%--<tr>
-                <th bgcolor=#4CAF50>Date:</th>
-                <td>
-                    <input type="date" name="date" size="45"/>
-                   &lt;%&ndash; <input type="datetime-local" name="date" size="45"/>&ndash;%&gt;
-                </td>
-            </tr>
-            <tr>--%>
             <td colspan="2" align="center">
                 <input type="submit" value="Save"/>
             </td>

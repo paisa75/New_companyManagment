@@ -1,7 +1,6 @@
 package com.dotin.dao;
 
 import com.dotin.model.CategoryElement;
-import com.dotin.model.Employee;
 import com.dotin.util.HibernateUtil;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -33,7 +32,6 @@ public class CategoryDao {
     }
 
 
-
     public List<CategoryElement> getAllVacationStates() {
 
         Transaction transaction = null;
@@ -55,7 +53,6 @@ public class CategoryDao {
         }
         return states;
     }
-
 
 
     public CategoryElement getCategoryElement(Long id) {

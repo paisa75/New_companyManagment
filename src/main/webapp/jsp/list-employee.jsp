@@ -96,27 +96,11 @@
                     </c:otherwise>
                 </c:choose>
                 <td><c:out value="${employee.address}"/></td>
-
-                    <%--  <td><c:choose>
-                          <c:when test="${employee.active==true}">
-                              <input disabled type="checkbox" name="active"
-                                     checked/>
-                          </c:when>
-                          <c:otherwise>
-                              <input disabled type="checkbox" name="active"
-                              />
-                          </c:otherwise>
-                      </c:choose>
-                      </td>--%>
-                    <%-- <td><input type="checkbox" id="active" name="active" value="${employee.active}"></td>--%>
                 <td>
                     <a href="employee/edit?id=<c:out value='${employee.id}' />">Edit</a>
                     &nbsp;&nbsp;&nbsp;&nbsp;
                     <a href="employee/delete?id=<c:out value='${employee.id}' />">Delete</a>
                     &nbsp;&nbsp;&nbsp;&nbsp;
-                        <%-- <a href="inactive?id=<c:out value='${employee.id}' />">Inactive</a>
-                         <input style="${projectEnvironmentBean.divStyle eq 'dipslay:none' ? 'display:block' : 'display:none'}"/>
-                         &nbsp;&nbsp;&nbsp;&nbsp;--%>
                     <a href="email?id=<c:out value='${employee.id}' />">Emails</a>
                     &nbsp;&nbsp;&nbsp;
                     <a href="vacation?id=<c:out value='${employee.id}' />">Vacation</a>
@@ -128,7 +112,6 @@
                         <c:otherwise>
                         </c:otherwise>
                     </c:choose>
-                        <%--<a href="checkVacation?id=<c:out value='${employee.id}' />">CheckLeave</a>--%>
                 </td>
             </tr>
         </c:forEach>
